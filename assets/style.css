@@ -1,0 +1,9 @@
+body {
+    margin: 0 auto;
+    padding: 250px;
+    background-image: url('dragon.jpg');
+    background-size: cover;
+    text-align: center;
+    font-size: 28px;
+    color: aliceblue;
+}
