@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('assets'));
+
 app.get('/', (req, res) => {
     res.sendFile('/index.html');
     res.sendFile('/style.css');
@@ -13,9 +15,8 @@ app.get('/userform', (req, res) => {
     };
     res.end(JSON.stringify(response));
 });
-app.use(express.static('./assets'));
 
-const server = app.listen(3000, '127.0.0.1', () => {
+const server = app.listen(3000, 'localhost', () => {
     const host = server.address().address;
     const port = server.address().port;
 
